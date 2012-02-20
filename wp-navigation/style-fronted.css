@@ -1,0 +1,30 @@
+/**
+ * Navigation Manager - Wordpress Plugin.
+ *
+ * @copyright:    Copyright 2008 Sergey Cherepanov. (http://www.cherepanov.org.ua)
+ * @author:       Sergey Cherepanov (sergey@cherepanov.org.ua)
+ * @license:      http://www.gnu.org/licenses/gpl.html GNU GENERAL PUBLIC LICENSE v3.0
+ * @date          16.12.08
+ */
+
+.nav-group.tree .navigation-item{
+    position:relative;
+}
+.nav-group.tree span.handler{
+    width:16px;
+    height:16px;
+    background:url('images/close.gif') 50% 50% no-repeat;
+    position:absolute;
+    left:-5px;
+    top:-2px;
+    cursor:pointer;
+    z-index:80;
+}
+.nav-group.tree ul.close,
+.nav-group.dropdown ul.close{
+    display:none;
+}
+.nav-group.tree ul.open,
+.nav-group.dropdown ul.open{
+    display:block;
+}

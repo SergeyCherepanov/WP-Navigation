@@ -1,0 +1,216 @@
+/**
+ * Navigation Manager - Wordpress Plugin.
+ *
+ * @copyright:    Copyright 2008 Sergey Cherepanov. (http://www.cherepanov.org.ua)
+ * @author:       Sergey Cherepanov (sergey@cherepanov.org.ua)
+ * @license:      http://www.gnu.org/licenses/gpl.html GNU GENERAL PUBLIC LICENSE v3.0
+ * @date          16.12.08
+ */
+
+.navigation-manager-container{
+    background:#fff;
+    border:1px solid #BBD8E7;
+    padding:10px 0;
+    position:relative;
+    -moz-border-radius:6px;
+    border-radius:6px;
+    overflow:hidden;
+    height:auto;
+}
+.navigation-manager-container *{
+    font-family:arial;
+}
+.navigation-manager-container .screen{
+    -moz-border-radius:6px;
+    border-radius:6px;
+    background:url('images/blank.gif');
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:999;
+    top:0;
+}
+table.navigation-manager{
+    margin:0;
+    border-collapse:collapse;
+    width:100%;
+}
+table.navigation-manager td{
+    border-right:1px solid #ccc;
+    padding:0 20px 20px;
+}
+table.navigation-manager td.first{
+}
+table.navigation-manager td.last{
+    border:0;
+}
+table.navigation-manager h3{
+    font-family:Arial;
+    font-weight:900;
+    border-bottom:4px solid #dfdfdf;
+    padding-bottom:5px;
+}
+table.navigation-manager li a{
+    line-height:18px;
+}
+#navigation-groups li{
+    list-style-type:none;
+    background:url('images/ico-group.gif') 0 0 no-repeat;
+    padding:0 0 0 20px;
+}
+#navigation-groups li a{
+    text-decoration:none;
+    padding:0 5px;
+}
+#navigation-groups li span{
+    cursor:pointer;
+    color:#eb5e00;
+}
+#navigation-groups li.active a{
+    font-weight:900;
+}
+#navigation-items,
+#navigation-items ul{
+    padding:0 0 0 0;
+    margin-left:0;
+    background:url('images/dot-h.gif') 10px 0 repeat-y #fff;
+}
+#navigation-items li{
+    list-style:none;
+    display:blok;
+    background:url('images/dot-w.gif') 0 9px repeat-x;
+    padding:1px 0 1px 10px;
+    margin:0 0 0 10px;
+}
+#navigation-items li span.handler{
+    float:left;
+    width:16px;
+    height:16px;
+    margin:0 -100% 0 -17px;
+    background:url('images/close.gif') 50% 50% no-repeat;
+    cursor:pointer;
+}
+#navigation-items li:last-child{
+    background:url('images/dot-last.gif') 0 0px no-repeat #fff;
+}
+#navigation-items ul.sub-level{
+    display:none;
+}
+#navigation-items ul.open{
+    display:block;
+}
+#navigation-items li a{
+    text-decoration:none;
+    display:block;
+    padding-left:22px;
+    background:url('images/ico-link.gif') 2px 0 no-repeat #fff;
+    outline:none;
+}
+#navigation-items li.active  a{
+    font-weight:900;
+}
+#navigation-items li.active  ul a{
+    font-weight:100;
+}
+#edititem .item-types{
+    padding:0;
+    margin:0;
+    padding-bottom:10px;
+    border-bottom:2px solid #dfdfdf;
+}
+#edititem .item-types li{
+    clear:both;
+    list-style:none;
+    padding:2px 0;
+    zoom:1;
+}
+#edititem p{
+    zoom:1;
+}
+#edititem .item-types li:after,
+#edititem p:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+#edititem p{
+    padding:1px 0;
+}
+#edititem .item-types li label,
+#edititem .custom-field  label{
+    float:left;
+    width:110px;
+}
+#edititem .item-types li label input{
+    position:relative;
+    top:2px;
+}
+#edititem select,
+#edititem input.text{
+    width:160px;
+    float:right;
+    border:1px solid #ccc;
+    padding:2px;
+}
+#edititem select{
+    width:160px;
+}
+#edititem .btn{
+    border-top:2px solid #dfdfdf;
+    clear:both;
+    margin-top:10px;
+    padding-top:10px;
+}
+#edititem .btn .delete{
+    background-color:#e56565;
+    border-color:#b97777;
+}
+
+*:first-child + html table.navigation-manager .button,
+*:first-child + html table.navigation-manager .button-secondary{
+    padding:0;
+    margin:2px;
+}
+*:first-child + html #edititem .button-secondary{
+    padding:0 5px;
+}
+*:first-child + html #edititem .button-secondary,
+*:first-child + html #edititem .button{
+    float:left;
+}
+.nav-info p{
+    margin:0;
+    margin-top:10px;
+}
+.indicator img{
+    margin-right:5px;
+    position:relative;
+    top:-2px;
+}
+.indicator{
+    visibility:hidden;
+    font-size:11px;
+}
+.nav-info .success{
+    background:#AAFBC1;
+}
+.nav-info .message{
+    padding:2px 10px;
+}
+.navigation-manager .options{
+    margin-bottom:10px;
+}
+button.addNewItem{
+    visibility:hidden;
+}
+.group_options .tabs li{
+     display:inline;
+     float:left;
+}
+.group_options .section{
+    clear:both;
+    display:none;
+}
+.group_options .section.act{
+    display:block;
+}
